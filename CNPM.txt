@@ -1,0 +1,63 @@
+1. CHỨC NĂNG ĐĂNG NHẬP
+	+ test không nhập j hết
+	+ Nhập sai tài khoản
+	+ Nhập sai mật khẩu
+
+
+
+
+
+2. BÁN HÀNG
+
+	- Đầu tiên khách vào sẽ tiếp nhận thông tin khách hàng ("Anh đã từng sử dụng dịch vụ ở đây! Chưa")
+		+ Nêú dùng rồi thì xin số điện thoại check tên trong guest list và xe đi cùng
+		+ Nếu chưa có thì add thông tin khách mới vào nếu cùng số điện thoại thì tạch 
+		(lúc add thông tin khách nói ràng buộc)
+		Chỗ tìm kiếm thì test tìm kiếm cho cô
+		+Updatea thông tin khách hàng cũng gàn buộc như nhau
+		+ Xóa mà xe đã có trong list xe cửa hàng thì không cho xóa
+		+ Check biển số xe nếu biển số xe có rồi thì thôi. Nếu chưa có thì add mới vào. Nếu nhân
+		  viên không để ý add xe mới có cùng biển số xe thì không sao cả. nó sẽ chặn lại
+		+ Xe chưa sử dụng bất kì linh kiện nào thì không cho in hóa đơn
+		+ Tiến hành thêm linh kiện thêm số lượng 0 thì không được, chữ ngoài số cũng không được
+		+ Nếu thêm sản phẩm có sẵn rồi thì nó sẽ cộng vào số lượng
+		+ Số lượng sẽ trừ về kho
+		+ Update tăng và giảm số lượng sẽ cộng hoặc trừ tùy vào từng trường hợp
+			
+		+ Trong trường hợp xóa hàng thì sẽ trả số lượng về cho kho
+		+ dịch vụ cho xe cho xe: Nếu có rồi thì sẽ báo đã tồn tại
+		+ Sau cùng là thông kê doanh thu và in lại hóa đơn
+
+3. QUẢN KHO
+	- Quản lí những linh kiện để phục vụ việc sửa chữa thay thế
+		+ Thêm linh kiện ( ràng buộc lỗi ), thêm cùng tên nhưng khác hãng thì được
+		+ Ngưng bán linh kiện nếu có trong mục chi tiết linh kiện thì không thể
+		+ Nếu thêm một sản phẩm mới mà nó đã ngưng bán thì nó sẽ active lại
+		+ Update linh kiện ràng buộc như thêm linh kiện
+		+ Tìm kiếm nhúng
+	- Quản lí các hãng xe
+		+ thêm hãng xe: Cùng tên hoặc cùng hãng không được
+		+ update
+		+ Xóa nếu có sử dụng các linh kiện của hãng đó thì không được xóa
+
+4. Quản lí
+
+	- Ngoài việc bao gồm những chức năng của quản quản kho và thu ngân, thì quản lý nhân viên, dịch vụ
+		+ Quản lí nhân viên
+		  Thêm nhân viên: Check các lỗi ràng buộc	
+			+ Tên ko quá 40 kí tự
+			+ Tài khoảng gồm chữ và số và không có kí tự đặc biệt
+			+ Pass trùng và không trùng
+			+ Ràng buộc số điện thoại năm trong khoản 10 11 số và sô bắt đầu bằng số 0
+			+ Ràng buộc email
+		   Update
+			+ Ràng buộc cũng tương tự như trên
+			+ Đổi pass phải khác pass cũ
+		   Xóa nhân viên
+			+ Nếu nhân viên có liên quan đến các hóa đơn thì nếu muốn xóa thì cho ở chế độ resign
+			+ Còn nếu không thì cho xóa luôn nhân viên nhiefu khi trường hợp đánh sai hoặc đánh dư thông tin
+			+ Nếu nhân viên nằm trong chế độ nghỉ việc thì tài khoản vẫn không thể đăng nhập được
+		_ Quản lí dịch vụ
+			+ Thêm dich vụ: Ràng buộc, nếu thêm dịch vụ mà đã cho ngưng bán thì nó sẽ active lại
+		
+	
